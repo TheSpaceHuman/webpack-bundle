@@ -2,6 +2,7 @@
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
+@import "utils/helpers";
 
 html {
   font-family: $mainFont;
@@ -59,7 +60,7 @@ section, .section {
   margin: 0 auto;
 }
 
-.content-wrapper {
+.content {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
