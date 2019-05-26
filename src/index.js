@@ -9,7 +9,7 @@ import './scss/main.scss'
 function requireAll(r) {
   r.keys().forEach(r);
 }
-requireAll(require.context('./img/icon', true, /\.svg$/));
+requireAll(require.context('./icon', true, /\.svg$/));
 
 // import 'vue'
 // import Vue from 'vue'

@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const fs = require('fs')
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -22,7 +22,7 @@ function generateHtmlPlugins (templateDir) {
     const extension = parts[1]
     // Create new HTMLWebpackPlugin with options
     return new HtmlWebpackPlugin({
-      hash: false,
+      hash: true,
       template: path.resolve(__dirname, `${templateDir}/${name}.pug`),
       filename: `${name}.html`
     })
@@ -125,13 +125,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
     }),
-    // new HtmlWebpackPlugin({
-    //   hash: false,
-    //   template: `${PATHS.src}/pages/index.pug`,
-    //   filename: `./index.html`
-    // }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+      { from: `${PATHS.src}/icon`, to: `${PATHS.assets}icon` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
     new SpriteLoaderPlugin(),
