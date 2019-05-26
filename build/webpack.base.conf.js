@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const fs = require('fs')
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -58,11 +59,22 @@ module.exports = {
         }
       }
     }, {
-      test: /\.(png|jpg|gif|svg)$/,
+      test: /\.(png|jpg|gif)$/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]'
       }
+    },{
+      test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'assets/fonts',
+          publicPath: '../fonts'
+        },
+
+      }]
     }, {
       test: /\.scss$/,
       use: [
@@ -95,6 +107,12 @@ module.exports = {
     }, {
       test: /\.pug$/,
       use: ['pug-loader']
+    }, {
+      test: /\.svg$/,
+      use: [
+        'svg-sprite-loader',
+        'svgo-loader'
+      ]
     }]
   },
   resolve: {
@@ -115,7 +133,8 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
-    ])
+    ]),
+    new SpriteLoaderPlugin(),
   ]
     .concat(htmlPlugins)
 }

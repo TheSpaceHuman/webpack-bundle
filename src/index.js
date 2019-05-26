@@ -1,9 +1,15 @@
 // JS - ./js/index.js
 import './js/'
+// CSS
+import './css/main.css'
 // SCSS
 import './scss/main.scss'
-// CSS (example)
-import './css/main.css'
+
+// Sprite
+function requireAll(r) {
+  r.keys().forEach(r);
+}
+requireAll(require.context('./img/icon', true, /\.svg$/));
 
 // import 'vue'
 // import Vue from 'vue'
@@ -20,12 +26,11 @@ Vue.component('SweetModal', require('./components/sweet-modal-vue/components/Swe
 import lang from 'element-ui/lib/locale/lang/ru-RU'
 import locale from 'element-ui/lib/locale'
 locale.use(lang)
-import Col from 'element-ui/packages/col/index.js';
-import Row from 'element-ui/packages/row/index.js';
+import Col from 'element-ui/lib/col'
+import Row from 'element-ui/lib/row'
 Vue.use(Row)
 Vue.use(Col)
-import 'element-ui/lib/theme-chalk/row.css'
-import 'element-ui/lib/theme-chalk/col.css'
+
 
 const app = new Vue({
   el: '#app'

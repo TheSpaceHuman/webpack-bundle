@@ -2,3 +2,12 @@ extends ../layout/main
 block content
     main.content
         h1 Hello
+        svg.icon
+            use(xlink:href="#kappa")
+        el-row(type='flex')
+            el-col(:span='12')
+                | Привет
+            el-col(:span='12')
+                i.el-icon-edit
+                i.el-icon-share
+

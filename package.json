@@ -32,6 +32,9 @@
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "svg-sprite-loader": "^4.1.6",
+    "svgo": "^1.2.2",
+    "svgo-loader": "^2.2.0",
     "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.8",
@@ -51,6 +54,8 @@
     "vue": "^2.6.8",
     "vue-burger-menu": "^2.0.1",
     "vue-carousel": "^0.18.0",
+    "vue-filter": "^0.2.5",
+    "vue-inputmask": "^0.2.1",
     "vue-scrollto": "^2.15.0",
     "vuelidate": "^0.7.4",
     "vuex": "^3.1.0"
