@@ -3,5 +3,12 @@ block title
     title Index page
 block content
     main.content
-        h1.py-3 Content
-
+        .container
+            h1.text-center Page content
+            mobile-menu(:right="true")
+                a.link Home
+            the-modal This is an alert.
+            carousel
+                slide 1
+                slied 2
+                slide 3

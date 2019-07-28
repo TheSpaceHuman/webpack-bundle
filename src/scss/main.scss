@@ -1,5 +1,5 @@
-@import "utils/libs";
 @import "utils/vars";
+@import "utils/libs";
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/helpers";
@@ -53,7 +53,7 @@ section, .section {
   position: relative;
 }
 
-.wrapper {
+.app-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
