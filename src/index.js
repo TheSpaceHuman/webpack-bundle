@@ -1,10 +1,9 @@
 // JS - ./js/index.js
-import './js/'
+import './js/index'
 // CSS
 import './css/main.css'
 // SCSS
 import './scss/main.scss'
-import './css/main.css'
 
 // Sprite
 function requireAll(r) {
