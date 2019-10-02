@@ -1,4 +1,4 @@
-// JS - ./js/index.js
+// JS
 import './js/index'
 // CSS
 import './css/main.css'
@@ -18,24 +18,41 @@ window.Vue = require('vue')
 
 // Components
 import { Slide as MobileMenu } from 'vue-burger-menu'
-Vue.component('MobileMenu', MobileMenu)
 import VueCarousel from 'vue-carousel'
 Vue.use(VueCarousel)
-
+Vue.component('MobileMenu', MobileMenu)
 Vue.component('TheModal', require('./components/TheModal.vue').default)
+Vue.component('TheInput', require('./components/TheInput.vue').default)
+Vue.component('TheInputNumber', require('./components/TheInputNumber.vue').default)
+Vue.component('TheSelect', require('./components/TheSelect.vue').default)
+
 
 
 // Plugins
+// VueInputMask
+import VueInputMask from 'vue-inputmask'
+Vue.use(VueInputMask)
+// VueScrollTo
+import  VueScrollTo from  'vue-scrollto'
+Vue.use(VueScrollTo)
+// VueLazyload
+import VueLazyload from 'vue-lazyload'
+Vue.use(VueLazyload, {lazyComponent: true})
 // element-ui
-// import lang from 'element-ui/lib/locale/lang/ru-RU'
-// import locale from 'element-ui/lib/locale'
-// locale.use(lang)
-// import Col from 'element-ui/lib/col'
-// import Row from 'element-ui/lib/row'
-// Vue.use(Row)
-// Vue.use(Col)
+import lang from 'element-ui/lib/locale/lang/ru-RU'
+import locale from 'element-ui/lib/locale'
+locale.use(lang)
+
+import Input from 'element-ui/lib/input'
+import InputNumber from 'element-ui/lib/input-number'
+import Select from 'element-ui/lib/select'
+import Option from 'element-ui/lib/option'
+Vue.use(Input)
+Vue.use(InputNumber)
+Vue.use(Select)
+Vue.use(Option)
 
 
 const app = new Vue({
-  el: '#app'
+  el: '#app',
 })

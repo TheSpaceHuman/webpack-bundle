@@ -1,6 +1,6 @@
 <template>
   <div class="modal_table">
-    <button type="button" class="btn btn-default" @click="$refs.modal.open()">{{ btnName }}</button>
+    <button type="button" class="btn btn-primary" @click="$refs.modal.open()">{{ btnName }}</button>
     <SweetModal ref="modal">
       <slot></slot>
     </SweetModal>
@@ -34,6 +34,6 @@
     margin-bottom: 20px;
   }
   .sweet-modal .sweet-box-actions .sweet-action-close:hover {
-    background-color: $primary-color!important;
+    background-color: $primary-color;
   }
 </style>
