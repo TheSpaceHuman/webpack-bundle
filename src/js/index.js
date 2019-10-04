@@ -1,5 +1,5 @@
 // Legacy dependency
-import 'jquery'
+import $ from "jquery";
 import 'fancybox'
 import 'jquery-modal'
 
