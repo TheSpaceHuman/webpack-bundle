@@ -1,6 +1,15 @@
 <template>
   <div class="input-wrapper">
-    <el-input v-model="value" :name="name" :type="type" :placeholder="placeholder"></el-input>
+    <el-input
+      v-model="val"
+      :name="name"
+      :type="type"
+      :prefix-icon="prefixIcon"
+      :suffix-icon="suffixIcon"
+      :placeholder="placeholder"
+    >
+      <slot></slot>
+    </el-input>
   </div>
 </template>
 
@@ -8,6 +17,12 @@
   export default {
     props: {
       value: {
+        default: ''
+      },
+      prefixIcon: {
+        default: ''
+      },
+      suffixIcon: {
         default: ''
       },
       name: {
@@ -21,7 +36,12 @@
       }
     },
     data() {
-      return {}
+      return {
+        val: ''
+      }
+    },
+    mounted() {
+      this.val = this.$props.value
     }
   }
 </script>

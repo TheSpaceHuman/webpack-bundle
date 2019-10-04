@@ -1,6 +1,6 @@
 <template>
   <div class="select-wrapper">
-    <el-select v-model="value" :name="name" :placeholder="placeholder">
+    <el-select v-model="val" :name="name" :placeholder="placeholder">
       <el-option
         v-for="item in options"
         :key="item.value"
@@ -35,7 +35,12 @@
       }
     },
     data() {
-      return {}
+      return {
+        val: ''
+      }
+    },
+    mounted() {
+      this.val = this.$props.value
     }
   }
 </script>

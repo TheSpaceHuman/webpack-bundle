@@ -4,7 +4,10 @@
       :max="max"
       :min="min"
       :name="name"
-      v-model="val"></el-input-number>
+      v-model="val"
+    >
+      <slot></slot>
+    </el-input-number>
   </div>
 </template>
 
@@ -25,7 +28,12 @@
       }
     },
     data() {
-      return {}
+      return {
+        val: ''
+      }
+    },
+    mounted() {
+      this.val = this.$props.value
     }
   }
 </script>
