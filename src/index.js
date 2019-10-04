@@ -29,12 +29,12 @@ Vue.component('TheSelect', require('./components/TheSelect.vue').default)
 
 
 // Plugins
-// VueInputMask
-import VueInputMask from 'vue-inputmask'
-Vue.use(VueInputMask)
+// VueTheMask
+import VueTheMask from 'vue-the-mask'
+Vue.use(VueTheMask)
 // VueScrollTo
-import  VueScrollTo from  'vue-scrollto'
-Vue.use(VueScrollTo)
+import vueScrollTo from 'vue-scroll-to';
+Vue.use(vueScrollTo);
 // VueLazyload
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload, {lazyComponent: true})
