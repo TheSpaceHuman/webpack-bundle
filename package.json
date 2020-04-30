@@ -52,7 +52,7 @@
     "bootstrap": "^4.3.1",
     "element-ui": "^2.12.0",
     "fancybox": "^3.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-modal": "^0.9.2",
     "normalize.css": "^8.0.1",
     "sweet-modal-vue": "^2.0.0",
