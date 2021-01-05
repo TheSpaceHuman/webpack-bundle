@@ -48,7 +48,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "animate.css": "^3.7.2",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "element-ui": "^2.12.0",
     "fancybox": "^3.0.1",
